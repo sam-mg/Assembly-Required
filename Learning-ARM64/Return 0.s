@@ -1,6 +1,6 @@
-@ This program returns 0
-@ This is the same as the return 0; statement in C
-@ The main function is called _main
+// This program returns 0
+// This is the same as the return 0; statement in C
+// The main function is called _main
 
 .global _main
 .align 2
