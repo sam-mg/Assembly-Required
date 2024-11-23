@@ -24,7 +24,7 @@ I got fed up with doing this one by one so i just automated it with a bash scrip
 ```bash
 function comp_arm64() {
     if [ -z "$1" ]; then
-        echo "Usage: comp_arm <.s>"
+        echo "Usage: comp_arm64 <.s>"
         return 1
     fi
 
