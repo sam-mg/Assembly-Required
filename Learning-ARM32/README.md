@@ -2,6 +2,12 @@
 
 This repository serves as a bridge for transferring code between my Mac and Google Console. It also provides guidance on compiling assembly code, converting it into object files, linking, and emulating them. Additionally, it acts as a backup for my experimental code.
 
+Before proceeding, ensure you have the necessary packages installed:
+```bash
+sudo apt install gcc-arm-linux-gnueabi
+sudo apt install qemu-user
+```
+
 First, let's compile files without libc:
 ```bash
 arm-linux-gnueabi-as <.s> -o <.o>
