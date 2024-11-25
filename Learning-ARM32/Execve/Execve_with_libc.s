@@ -9,4 +9,4 @@ main:
     bl exit        // Calling exit function in C
 
 .data
-binary_path: .asciz "<the_path_of_the_executable>"
+path: .asciz "<the_path_of_the_executable>"
