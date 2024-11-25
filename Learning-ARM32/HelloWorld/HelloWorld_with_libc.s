@@ -10,4 +10,4 @@ _start:
     bl exit     // Calling exit function in C
 
 .data
-msg: .asciz "Hello World!\n"
+msg: .ascii "Hello World!\n"
