@@ -9,7 +9,7 @@ for_loop:
     cmp r4, r5        // Compare r4 (current row) with r5 (total rows)
     bge exit_branch   // If r4 >= r5, exit the loop
 
-    mov r6, r5        // r6 = r5 (total rows)
+    mov r6, r5        // Setting copy of r5 to r6
     sub r6, r6, r4    // r6 = r5 - r4 (number of spaces before stars)
 
     mov r7, #0        // Initialize space counter (r7)
@@ -19,8 +19,10 @@ space_print:
     bge print_stars   // If r7 >= r6, start printing stars
 
     ldr r0, =spac     // Load address of space character
-    bl printf         // Call printf to print space
+    bl printf         // Calling printf function in C
+
     add r7, r7, #1    // Increment space counter
+
     b space_print     // Repeat space printing loop
 
 print_stars:
@@ -31,27 +33,31 @@ star_print:
     ble print_newline // If no more stars to print, print newline
 
     ldr r0, =star     // Load address of star character
-    bl printf         // Call printf to print star
+    bl printf         // Calling printf function in C
+
     sub r8, r8, #1    // Decrement star counter
 
-    cmp r8, #0
+    cmp r8, #0        // Check if we have printed all stars
     bne print_space   // If there are more stars, print a space after the star
+    
     b star_print      // Continue printing stars
 
 print_space:
     ldr r0, =spac     // Load space character
-    bl printf         // Print space between stars
-    b star_print      // Continue printing stars
+    bl printf         // Calling printf function in C
+
+    b star_print      // Branch to printing stars
 
 print_newline:
     ldr r0, =nl       // Load address of newline character
-    bl printf         // Print newline to go to the next row
-    add r4, r4, #1    // Increment r4 (move to the next row)
-    b for_loop        // Repeat the loop for the next row
+    bl printf         // Calling printf function in C
+
+    add r4, r4, #1    // Increment r4
+    b for_loop        // Branch to for_loop for the next row
 
 exit_branch:
     mov r0, #1        // Set r0 to 1 (exit status)
-    bl exit           // Call exit function to terminate the program
+    bl exit           // Calling exit function in C
 
 .data
 star: .asciz "*"
