@@ -11,4 +11,5 @@ In this section, I will discuss the instructions used in ARM Assembly Language.
 | cmp | Compare - Used to compare two values, allowing branching using <br> `beq` (Branch if Equal), <br> `bne` (Branch if Not Equal), <br> `bgt` (Branch if Greater Than), <br> `blt` (Branch if Less Than), <br> `bge` (Branch if Greater or Equal), <br> `ble` (Branch if Less or Equal). |
 | b | Branch - Used to branch to a different part of the code. <br> `b <label>` // This jumps to the code at the specified label. |
 | add | Add - Used to add two values. <br> `add <destination>, <register>, <register/value>` |
-| sub | Subtract - Used to subtract two values. <br> `sub <destination>, <register>, <register/value>` |
+| sub | Subtract - Used to subtract two values. <br> `sub <destination>, <register>, <register/value>` <br> `<destination> = <register> - <register/value>` |
+| rsb | Reverse Subtract <br> `rsb <destination>, <register>, <register/value>` <br> `<destination> = <register/value> - <register>` |
