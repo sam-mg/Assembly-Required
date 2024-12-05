@@ -19,9 +19,9 @@ main:
     bl exit      // Calling exit function in C
 
 .data
-inp: .ascii "Enter Something: "
-for: .ascii "%s"
-out: .ascii "You entered: "
+inp: .asciz "Enter Something: "
+for: .asciz "%s"
+out: .asciz "You entered: "
 
 .bss
 iNp: .skip 1      // Allocate 1 byte of space for the input
