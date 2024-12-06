@@ -13,3 +13,6 @@ In this section, I will discuss the instructions used in ARM Assembly Language.
 | add | Add - Used to add two values. <br> `add <destination>, <register>, <register/value>` |
 | sub | Subtract - Used to subtract two values. <br> `sub <destination>, <register>, <register/value>` <br> `<destination> = <register> - <register/value>` |
 | rsb | Reverse Subtract <br> `rsb <destination>, <register>, <register/value>` <br> `<destination> = <register/value> - <register>` |
+| mul | Multiply - Used to multiply two values. <br> `mul <destination>, <register>, <register/value>` <br> `<destination> = <register> * <register/value>` |
+| ldrb | Load Register Byte - Used to load an 8-bit value into a register. <br> `ldrb <register>, [ <address> ]` <br> `ldrb R0, [R1]` // This loads the byte value present at the address in `R1` into `R0` |
+| strb | Store Register Byte - Used to store an 8-bit value from a register into memory. <br> `strb <register>, [ <address> ]` <br> `strb R0, [R1]` // This stores the byte value in `R0` into the address in `R1` |
