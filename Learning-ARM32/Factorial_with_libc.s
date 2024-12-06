@@ -26,7 +26,7 @@ for_loop:
     b for_loop        // Continue the loop
 
 exit_loop:
-    ldr r0, =for   // Load the format string to print the result
+    ldr r0, =for      // Load the format string to print the result
     mov r1, r4        // Move result of factorial into r1
     bl printf         // Calling printf to output the result
 
