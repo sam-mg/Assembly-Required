@@ -6,7 +6,7 @@ main:
     ldr r0, =inp1     // Load address of inp1
     bl printf         // Calling printf function in C
 
-    ldr r0, =for      // Load format string for scanf
+    ldr r0, =str_for  // Load format string for scanf
     ldr r1, =iNp1     // Load address of iNp1
     bl scanf          // Calling scanf function in C
 
@@ -63,6 +63,7 @@ exit_loop:
 inp1: .asciz "Enter a string: "
 inp2: .asciz "Enter Character to be replaced: "
 inp3: .asciz "Enter Character to be replaced with: "
+str_for: .asciz "%[^\n]"
 for: .asciz "%s"
 out: .asciz "Output string: %s\n"
 
